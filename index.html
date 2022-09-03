@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Bookshelf Apps | By Raldy Achmad</title>
+  </head>
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar_title">Bookshelf Apps</h1>
+    </header>
+    <main>
+      <section class="input_section" id="inputSection">
+        <h2 id="h2InputSection">Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input" id="sectionTitle">
+            <label for="inputBookTitle">Judul</label>
+            <input id="inputBookTitle" type="text" placeholder="Masukan Judul Buku" />
+            <small class="error_display" id="errorTitle">Wajib Diisi</small>
+          </div>
+          <div class="input" id="sectionAuthor">
+            <label for="inputBookAuthor">Penulis</label>
+            <input id="inputBookAuthor" type="text" placeholder="Masukan Nama Penulis" />
+            <small class="error_display" id="errorAuthor">Wajib Diisi</small>
+          </div>
+          <div class="input" id="sectionYear">
+            <label for="inputBookYear">Tahun</label>
+            <input id="inputBookYear" type="number" placeholder="Masukan Tahun Terbit" min="1900" max="2022" />
+            <small class="error_display" id="errorYear">Wajib Diisi</small>
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input id="inputBookIsComplete" type="checkbox" />
+          </div>
+          <button id="bookSubmit" type="button">Masukkan Buku</button>
+        </form>
+      </section>
+      <section class="search_section book_shelf" id="searchSection">
+        <h2 id="searchSectionH2">Cari Buku</h2>
+        <form id="searchBook">
+          <label for="searchBookTitle">Keyword</label>
+          <input id="searchBookTitle" type="text" placeholder="Buku Apa yang Ingin Anda Cari?" />
+          <button id="searchSubmit" type="submit">Cari</button>
+        </form>
+
+        <div id="searchResult" class="book_list" style="width: 100%"></div>
+      </section>
+
+      <section class="book_shelf" id="bookShelfUncompleted">
+        <h2 id="uncompletedH2">Belum selesai dibaca</h2>
+
+        <div id="incompleteBookshelfList" class="book_list"></div>
+      </section>
+
+      <section class="book_shelf" id="bookShelfCompleted">
+        <h2 id="completedH2">Selesai dibaca</h2>
+
+        <div id="completeBookshelfList" class="book_list"></div>
+      </section>
+    </main>
+
+    <button class="atas back_to_top hidden">
+      <p><span class="material-symbols-outlined">keyboard_arrow_up</span></p>
+      <p>Atas</p>
+    </button>
+
+    <footer>
+      <p>Made with &#x1F496; by Raldy Achmad © 2022</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
